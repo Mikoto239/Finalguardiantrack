@@ -184,7 +184,7 @@ app.post('/stopcurrentlocation', async (req, res) => {
 
 
   try {
-    const response = await axios.get(`https://geocode.maps.co/reverse?lat=${latitude}&lon=${longitude}&api_key=${process.env.OPENCAGE_API_KEY}`);
+    const response = await axios.get(`https://geocode.maps.co/reverse?lat=${currentlatitude}&lon=${currentlongitude}&api_key=${process.env.OPENCAGE_API_KEY}`);
     const responseData = response.data;
 
     // Check if the response contains address information
