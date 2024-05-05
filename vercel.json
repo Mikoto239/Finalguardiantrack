@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "builds": [{ "src": "/app.js", "use": "@vercel/node" }],
+  "routes": [
+    { "src": "/data", "dest": "/app.js" },
+    { "src": "/", "dest": "/app.js" },
+    { "src": "/getme", "dest": "/app.js" },
+    { "src": "/changestatus", "dest": "/app.js" },
+    { "src": "/hardwarestatus", "dest": "/app.js" },
+    { "src": "/hardwareregister", "dest": "/app.js" },
+    { "src": "/deleteuser", "dest": "/app.js" },
+    { "src": "/userregister", "dest": "/app.js" },
+    {"src":"/getlocation", "dest":"/app.js"},
+    {"src":"/usernumber", "dest" :"/app.js"},
+    {"src":"/currentlocation", "dest" :"/app.js"},
+    {"src":"/getcurrentlocation", "dest" :"/app.js"},
+    {"src":"/stopcurrentlocation", "dest" :"/app.js"},
+     {"src":"/gethistory", "dest" :"/app.js"},
+    {"src":"/checkuserregister","dest":"/app.js"},
+    {"src":"/deletecurrentlocation","dest" :"/app.js"},
+    {"src":"/checkpinlocation", "dest" :"/app.js"},
+    {"src":"/sendtheftdetails","dest":"/app.js"},
+    {"src":"/removetheftdetails","dest":"/app.js"},
+    {"src":"/gettheftdetails", "dest" : "/app.js"},
+    {"src":"/getnotification","dest":"/app.js"},
+    {"src":"/getpinhistory","dest":"/app.js"}
+  ]
+}
