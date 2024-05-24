@@ -23,7 +23,6 @@
     {"src":"/removetheftdetails","dest":"/app.js"},
     {"src":"/gettheftdetails", "dest" : "/app.js"},
     {"src":"/getnotification","dest":"/app.js"},
-    {"src":"/getpinhistory","dest":"/app.js"},
-    {"src":"/updatephonenumber","dest":"/app.js"}
+    {"src":"/getpinhistory","dest":"/app.js"}
   ]
 }
