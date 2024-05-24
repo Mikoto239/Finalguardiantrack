@@ -102,7 +102,7 @@ app.post('/updatephonenumber', async (req, res) => {
 
 
   
-}
+
 app.post('/data', async (req, res) => {
   const { vibrationDuration, latitude, longitude, uniqueId, level } = req.body;
 
