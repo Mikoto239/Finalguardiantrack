@@ -78,7 +78,31 @@ app.get('/getlocation', async (req, res) => {
 
 
 
+app.post('/updatephonenumber', async (req, res) => {
+    const { cellphonenumber, email, name } = req.body;
 
+    try {
+        // Find the user based on email and name
+        const user = await User.findOne({ email, name });
+
+        if (!user) {
+            return res.status(404).json({ message: "User not found" });
+        }
+
+        // Update the user's cellphonenumber
+        user.cellphonenumber = cellphonenumber;
+        await user.save();
+
+        return res.status(200).json({ message: "Phone number updated successfully" });
+    } catch (error) {
+        console.error("Error updating phone number:", error);
+        return res.status(500).json({ message: "Failed to update phone number" });
+    }
+});
+
+
+  
+}
 app.post('/data', async (req, res) => {
   const { vibrationDuration, latitude, longitude, uniqueId, level } = req.body;
 
